@@ -1,12 +1,5 @@
 package desing.pattern.behavioral.observer;
 
-import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
-
-@Data
-@Getter
-@Setter
 public class Subscriber {
 	
 	private String name;
@@ -19,5 +12,23 @@ public class Subscriber {
 	public void subribeTo(Publisher channel) {
 		this.channel = channel;
 	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public Publisher getChannel() {
+		return channel;
+	}
+
+	public void setChannel(Publisher channel) {
+		this.channel = channel;
+	}
+	
+	
 	
 }

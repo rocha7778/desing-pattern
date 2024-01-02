@@ -21,9 +21,11 @@ public class TransportCompany {
         InvoiceMaker_v1 invoiceMaker = new InvoiceMaker_v1();
         ChairFactory chairFactory = new ChairFactory();
 
-        BaseChair chair = chairFactory.getChair(chairInventory.get(1));
+        BaseChair chair = chairFactory.getChair("hola");
 
-        invoiceMaker.makeBill(chair);
+       // invoiceMaker.makeBill(chair);
+        
+        System.out.println(chair);
 
 
 

@@ -3,6 +3,7 @@ package desing.pattern.behavioral.strategy;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.time.LocalDate;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -13,6 +14,8 @@ public class PayByPayPal implements PayStrategy {
 	private String email;
 	private String password;
 	private boolean signedIn;
+	
+	private LocalDate local;
 
 	static {
 		DATA_BASE.put("amanda1985", "amanda@ya.com");

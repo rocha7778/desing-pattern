@@ -3,13 +3,7 @@ package desing.pattern.behavioral.observer;
 import java.util.ArrayList;
 import java.util.List;
 
-import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
 
-@Data
-@Getter
-@Setter
 public class Publisher {
 	private List<Subscriber> subs = new ArrayList<>();
 	private String title;
@@ -30,4 +24,23 @@ public class Publisher {
 		this.title = title;
 		notitySubscriber();
 	}
+
+	public List<Subscriber> getSubs() {
+		return subs;
+	}
+
+	public void setSubs(List<Subscriber> subs) {
+		this.subs = subs;
+	}
+
+	public String getTitle() {
+		return title;
+	}
+
+	public void setTitle(String title) {
+		this.title = title;
+	}
+	
+	
+	
 }
