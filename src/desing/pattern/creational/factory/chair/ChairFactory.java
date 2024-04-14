@@ -2,6 +2,7 @@ package desing.pattern.creational.factory.chair;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Optional;
 
 public class ChairFactory {
 	private Map<String, BaseChair> makersMap = new HashMap<>();
@@ -12,8 +13,8 @@ public class ChairFactory {
 		makersMap.put("ROCKERA", new VintageChair(50,50,"Rock Brand", "Black/gray Color"));
 	}
 
-	public BaseChair getChair(String shapeType) {
-		return makersMap.get(shapeType);
+	public Optional<BaseChair> getChair(String shapeType) {
+		return Optional.ofNullable(makersMap.get(shapeType));
 	}
 }
 

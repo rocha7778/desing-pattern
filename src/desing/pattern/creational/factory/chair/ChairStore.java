@@ -5,6 +5,8 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Optional;
+import java.util.function.Supplier;
 
 public class ChairStore {
 	
@@ -35,11 +37,14 @@ public class ChairStore {
 			int choice = Integer.parseInt(reader.readLine());
 			
 			// a chair is asked to the factory
-			BaseChair chair = chairFactory.getChair(chairInventory.get(choice));
+			Optional<BaseChair> chair = chairFactory.getChair(chairInventory.get(choice));
 			
 			System.out.println("Do you wish to continue selecting products? Y/N :" + "\n");
 			continueChoice = reader.readLine();
-			System.out.println("The product " + chair.printInfo() + " will be delivered to your address");
+			
+			BaseChair chairFrom = chair.orElse(new VintageChair(50,50,"Rock Brand", "Black/gray Color"));
+			
+			System.out.println("The product " + chairFrom.printInfo() + " will be delivered to your address");
 		}
 	}
 

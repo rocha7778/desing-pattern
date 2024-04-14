@@ -8,6 +8,8 @@ public class TestCloneObject {
 		
 		Employee employee = new Employee(1,"Rocha","Accountant",100.0,"Carrera 34#46-33");
 		Employee employee2 = employee;
+
+		
 		
 		employee2.setName("Rocha Modified");
 		

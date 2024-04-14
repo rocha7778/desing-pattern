@@ -2,6 +2,7 @@ package desing.pattern.creational.factory.chair;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Optional;
 
 public class TransportCompany {
 
@@ -21,7 +22,7 @@ public class TransportCompany {
         InvoiceMaker_v1 invoiceMaker = new InvoiceMaker_v1();
         ChairFactory chairFactory = new ChairFactory();
 
-        BaseChair chair = chairFactory.getChair("hola");
+        Optional<BaseChair> chair = chairFactory.getChair("hola");
 
        // invoiceMaker.makeBill(chair);
         

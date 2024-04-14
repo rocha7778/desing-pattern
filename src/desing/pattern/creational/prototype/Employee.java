@@ -68,6 +68,7 @@ public class Employee implements Prototype {
 
 	@Override
 	public Prototype getClone() {
+		
 
 		return new Employee(id, name, designation, salary, address);
 	}

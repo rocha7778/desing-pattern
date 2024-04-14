@@ -1,4 +1,5 @@
 module desingPattern {
+	requires lombok;
 	
 	
 }

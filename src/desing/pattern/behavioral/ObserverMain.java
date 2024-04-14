@@ -15,6 +15,11 @@ public class ObserverMain {
         subject.registerObserver(observer3);
 
         subject.setMessage("Hello, observers!");
+        
+        Carlos c = new Carlos("CArlos");
+        c.getName();
+        System.out.println(c);
+        
 
 	}
 
